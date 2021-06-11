@@ -9,19 +9,19 @@ let products = [
         inCart: 0,
     },
     {
-        name: "balenciaga shoes",
+        name: "Balenciaga Shoes",
         tag: "Shoes",
         price: 100,
         inCart: 0,
     },
     {
-        name: "champion hoodie",
+        name: "Champion Hoodie",
         tag: "hoodie",
         price: 80,
         inCart: 0,
     },
     {
-        name: "fila shorts",
+        name: "Fila Shorts",
         tag: "shorts",
         price: 60,
         inCart: 0,
@@ -63,7 +63,7 @@ function totalCost(product) {
 
 
 
-// add products to the cart in the form of local storage, 
+// add products to the cart in the form of local storage,
 // convert item to json format
 function setItems(product) {
     // retrieve the products in cart object from local storage
@@ -83,7 +83,7 @@ function setItems(product) {
                 [product.tag]: product
             }
         }
-        // update product aount in cart 
+        // update product aount in cart
         cartItems[product.tag].inCart += 1;
     } else {
         // if cart is empty add an item to cart
@@ -109,7 +109,7 @@ function cartNumbers(product) {
         localStorage.setItem('cartNumbers', productNumbers + 1);
         document.querySelector('.cart-button a span').textContent = productNumbers + 1;
 
-        // if cart is empty, set product numbers to 1 then update cart button to 1 
+        // if cart is empty, set product numbers to 1 then update cart button to 1
     } else {
         localStorage.setItem('cartNumbers', 1)
         document.querySelector('.cart-button a span').textContent = 1;
@@ -162,7 +162,7 @@ function displayCart() {
                 <h4 class="basketTotalTitle">
                 Basket Total
                 </h4>
-                <h4 class="basketTotal">
+                <h4 class="basketTotal" name="basketTotal" value="$${localStorage.getItem("totalCost")}.00">
                 $${localStorage.getItem("totalCost")}.00
                 </h4>
                 </div>`
@@ -257,3 +257,30 @@ function addOneItem(cartItems, item) {
     document.location.reload(true)
 
 }
+
+
+console.log(localStorage.getItem("productsInCart"))
+
+
+var total = localStorage.getItem("totalCost");
+
+
+console.log(total)
+
+
+var finalProduct =  {
+        price_data: {
+          currency: 'usd',
+          product_data: {
+            name: 'Total Amount',
+            images: ['https://i.imgur.com/n7M4u9i.png'],
+          },
+          unit_amount: 10000,
+        },
+        quantity: 1,
+      }
+
+
+finalProduct.price_data.unit_amount = total;
+
+console.log(finalProduct.price_data.unit_amount);

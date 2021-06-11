@@ -1,13 +1,13 @@
 #logo {
     margin-top:5%;
     height: 6vh;
-    
+
 }
 h1 {
     display:flex;
     text-align:center;
     align-items:center;
-    
+
 }
 body {
     font-family: 'Bebas Neue', cursive;
@@ -33,12 +33,12 @@ header {
     height:18rem;
 }
 .clothing-cards {
-    margin-bottom:5vh;  
+    margin-bottom:5vh;
 }
 .cart-button {
     margin-top:2vh;
     font-weight:800;
-  
+
 }
 .cart-button .btn:hover {
     background-color:#4cc9f0;
@@ -74,7 +74,7 @@ margin-top: 3vh;
     margin: 2vh;
   font-weight:700;
   font-size:xx-large;
-  
+
 }
 
 .main-text-2 {
@@ -87,7 +87,7 @@ hr {
 
 }
 .shop-now {
-    
+
         position: absolute;
         top: 50%;
         left: 50%;
@@ -141,7 +141,7 @@ hr {
 .page-end {
     margin-top:2%;
     background-color:black;
-    
+
 }
 
 .socials {
@@ -216,7 +216,7 @@ hr {
 
 .total {
     width:10%;
- 
+
 
     display: flex;
     align-items:center;
@@ -252,9 +252,9 @@ svg {
     flex-wrap:wrap;
     margin-top:5px;
     margin-bottom:0%;
-    padding-bottom:100px;
-   
-  
+    padding-bottom:10%;
+
+
 }
 
 .basketTotalContainer {
@@ -269,4 +269,10 @@ svg {
 
 .basketTotal {
     width:10%;
+}
+
+.checkout {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
